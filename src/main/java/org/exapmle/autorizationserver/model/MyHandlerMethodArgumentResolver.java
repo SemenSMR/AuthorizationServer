@@ -1,6 +1,5 @@
-package org.exapmle.autorizationserver.handler;
+package org.exapmle.autorizationserver.model;
 
-import org.exapmle.autorizationserver.user.User;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;

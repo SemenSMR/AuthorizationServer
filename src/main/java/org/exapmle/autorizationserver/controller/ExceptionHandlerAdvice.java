@@ -1,5 +1,8 @@
-package org.exapmle.autorizationserver.Exception;
+package org.exapmle.autorizationserver.controller;
 
+import org.exapmle.autorizationserver.Exception.ConstraintException;
+import org.exapmle.autorizationserver.Exception.InvalidCredentials;
+import org.exapmle.autorizationserver.Exception.UnauthorizedUser;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,4 +21,10 @@ public class ExceptionHandlerAdvice {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.UNAUTHORIZED);
     }
 
-}
+    @ExceptionHandler(ConstraintException.class)
+    public ResponseEntity<String> handleConstraintViolation(ConstraintException e) {
+        return new ResponseEntity<>( e.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+    }
+
+

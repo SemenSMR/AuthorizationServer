@@ -1,5 +1,6 @@
-package org.exapmle.autorizationserver;
+package org.exapmle.autorizationserver.repository;
 
+import org.exapmle.autorizationserver.model.Authorities;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;

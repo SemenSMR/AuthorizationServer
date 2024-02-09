@@ -1,27 +1,29 @@
-package org.exapmle.autorizationserver;
+package org.exapmle.autorizationserver.service;
 
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.exapmle.autorizationserver.Exception.InvalidCredentials;
+import org.exapmle.autorizationserver.Exception.ConstraintException;
 import org.exapmle.autorizationserver.Exception.UnauthorizedUser;
-import org.exapmle.autorizationserver.user.User;
+import org.exapmle.autorizationserver.model.Authorities;
+import org.exapmle.autorizationserver.repository.UserRepository;
+import org.exapmle.autorizationserver.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @AllArgsConstructor
 @Service
 public class AuthorizationService {
-    UserRepository userRepository;
+   private final UserRepository userRepository;
 
-    List<Authorities> getAuthorities(@Valid User user) {
+   public List<Authorities> getAuthorities(@Valid User user) {
         String username = user.getUser();
         String password = user.getPassword();
         if (isEmpty(username) || isEmpty(password)) {
-            throw new InvalidCredentials("User name or password is empty");
+            throw new ConstraintException("User name or password is empty");
         }
         List<Authorities> userAuthorities = userRepository.getUserAuthorities(username,password);
         if (isEmpty(userAuthorities)) {
-            throw new UnauthorizedUser("Unknown user " + username);
+            throw new UnauthorizedUser("Invalid Сredentials " );
         }
         return userAuthorities;
     }

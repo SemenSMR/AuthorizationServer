@@ -1,4 +1,4 @@
-package org.exapmle.autorizationserver.handler;
+package org.exapmle.autorizationserver.model;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;

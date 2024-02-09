@@ -1,6 +1,6 @@
 package org.exapmle.autorizationserver;
 
-import org.exapmle.autorizationserver.handler.MyConfiguration;
+import org.exapmle.autorizationserver.model.MyConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

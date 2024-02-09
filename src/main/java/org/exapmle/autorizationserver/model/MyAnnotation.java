@@ -1,4 +1,4 @@
-package org.exapmle.autorizationserver.handler;
+package org.exapmle.autorizationserver.model;
 
 import org.springframework.web.bind.annotation.ValueConstants;
 
