@@ -1,8 +1,8 @@
 package org.exapmle.autorizationserver.controller;
 
-import org.exapmle.autorizationserver.Exception.ConstraintException;
-import org.exapmle.autorizationserver.Exception.InvalidCredentials;
-import org.exapmle.autorizationserver.Exception.UnauthorizedUser;
+import org.exapmle.autorizationserver.exception.ConstraintException;
+import org.exapmle.autorizationserver.exception.InvalidCredentials;
+import org.exapmle.autorizationserver.exception.UnauthorizedUser;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

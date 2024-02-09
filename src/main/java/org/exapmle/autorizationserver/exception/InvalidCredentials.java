@@ -1,4 +1,4 @@
-package org.exapmle.autorizationserver.Exception;
+package org.exapmle.autorizationserver.exception;
 
 public class InvalidCredentials extends RuntimeException {
     public InvalidCredentials(String msg) {

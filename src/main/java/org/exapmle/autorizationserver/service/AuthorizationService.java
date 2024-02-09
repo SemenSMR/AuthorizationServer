@@ -2,8 +2,8 @@ package org.exapmle.autorizationserver.service;
 
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.exapmle.autorizationserver.Exception.ConstraintException;
-import org.exapmle.autorizationserver.Exception.UnauthorizedUser;
+import org.exapmle.autorizationserver.exception.ConstraintException;
+import org.exapmle.autorizationserver.exception.UnauthorizedUser;
 import org.exapmle.autorizationserver.model.Authorities;
 import org.exapmle.autorizationserver.repository.UserRepository;
 import org.exapmle.autorizationserver.model.User;
